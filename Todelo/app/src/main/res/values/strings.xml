@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Toddelo</string>
+    <string name="app_dashbordtitle">Dashbord</string>
+    <string name="app_Tile_Todo">Todo</string>
+    <string name="app_dashbord_Planner">Planner</string>
+    <string name="title_activity_todo">Todo</string>
+    <string name="app_dashbord_Setting">Setting</string>
+    <string name="app_dashbord_Profile">Profile</string>
+</resources>
