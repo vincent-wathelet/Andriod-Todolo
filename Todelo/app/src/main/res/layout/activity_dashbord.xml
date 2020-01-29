@@ -7,35 +7,29 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:focusable="auto"
-        android:foregroundGravity="fill_horizontal|left"
-        app:columnOrderPreserved="false"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24"
-        app:rowCount="3"
-        app:rowOrderPreserved="false"
-        app:useDefaultMargins="true">
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnTodo"
-            android:layout_width="170sp"
-            android:layout_height="170sp"
+            android:id="@+id/btnSettings"
+            android:layout_width="160sp"
+            android:layout_height="160sp"
             android:layout_margin="15dp"
+            android:layout_marginBottom="1dp"
             android:clickable="true"
             app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="100sp"
-            app:layout_column="0"
-            app:layout_row="0"
-            tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="1dp">
+            app:cardCornerRadius="100sp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,27 +39,125 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/PlannerImage"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:id="@+id/SettingsImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/app_setting" />
+
+                <TextView
+                    android:id="@+id/Settingstitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/app_dashbord_Setting"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnProfile"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="1dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="100sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ProfileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_033_user" />
+
+                <TextView
+                    android:id="@+id/ProfileTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="@string/app_dahsbord_Login"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnTodo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_margin="15dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="100sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/TodoImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     app:srcCompat="@drawable/ic_todo" />
 
                 <TextView
-                    android:id="@+id/Pannertitle"
+                    android:id="@+id/TodoTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="15dp"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
                     android:text="@string/app_Tile_Todo"
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnTodo"
-            android:layout_width="170sp"
-            android:layout_height="170sp"
+            android:id="@+id/btnPlanner"
+            android:layout_width="160sp"
+            android:layout_height="160sp"
             android:layout_margin="15dp"
             android:clickable="true"
             app:cardBackgroundColor="#FFFFFF"
@@ -80,169 +172,26 @@
 
                 <ImageView
                     android:id="@+id/PlannerImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/ic_planner" />
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/app_planner" />
 
                 <TextView
                     android:id="@+id/Pannertitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
                     android:text="@string/app_dashbord_Planner"
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnTodo"
-            android:layout_width="170sp"
-            android:layout_height="170sp"
-            android:layout_margin="15dp"
-            android:clickable="true"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="100sp"
-            app:layout_column="0"
-            app:layout_row="1"
-            tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/PlannerImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/ic_planner" />
-
-                <TextView
-                    android:id="@+id/Pannertitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_Tile_Todo"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnTodo"
-            android:layout_width="170sp"
-            android:layout_height="170sp"
-            android:layout_margin="15dp"
-            android:clickable="true"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="100sp"
-            app:layout_column="1"
-            app:layout_row="1"
-            tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/PlannerImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/ic_planner" />
-
-                <TextView
-                    android:id="@+id/Pannertitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_Tile_Todo"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnTodo"
-            android:layout_width="170sp"
-            android:layout_height="170sp"
-            android:layout_margin="15dp"
-            android:clickable="true"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="100sp"
-            app:layout_column="1"
-            app:layout_row="2"
-            tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/PlannerImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/ic_planner" />
-
-                <TextView
-                    android:id="@+id/Pannertitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_Tile_Todo"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnTodo"
-            android:layout_width="170sp"
-            android:layout_height="170sp"
-            android:layout_margin="15dp"
-            android:clickable="true"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="100sp"
-            app:layout_column="0"
-            app:layout_row="2"
-            tools:layout_editor_absoluteX="261dp"
-            tools:layout_editor_absoluteY="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/PlannerImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/ic_planner" />
-
-                <TextView
-                    android:id="@+id/Pannertitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_dashbord_Setting"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </androidx.gridlayout.widget.GridLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

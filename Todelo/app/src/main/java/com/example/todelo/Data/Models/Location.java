@@ -1,4 +1,4 @@
-package com.example.todelo.Models;
+package com.example.todelo.Data.Models;
 
 public class Location {
 

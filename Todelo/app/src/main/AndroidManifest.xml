@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dashbord">
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".ui.Dashbord.Dashbord">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.todelo.ui.Dashbord.Dashbord" />
+        </activity>
+        <activity android:name=".ui.Dashbord.Dashbord">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Todo"
+            android:name=".ui.Todo.Todo"
             android:label="@string/title_activity_todo"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
